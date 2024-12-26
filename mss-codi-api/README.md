@@ -453,10 +453,11 @@
 * 기본적으로 Spring Boot를 사용해서 Server 설정등은 Spring Boot Configuration 사용
 * Application 추가 설정
 
-| 설정 이름                     | Data type | 기본값 | 설명                                        |
-|---------------------------|-----------|-----|-------------------------------------------|
-| codi.category.brand.count | long      | 5   | 카테고리별 최저가/최고가 조회시 보여 줄 최대 건수              |
-| codi.brand.product.count  | long      | 5   | 한브랜드당 최대 노출할 상품 수                         | 
+| 설정 이름                     | Data type | 기본값 | 설명                           |
+|---------------------------|-----------|-----|------------------------------|
+| codi.category.brand.count | long      | 5   | 카테고리별 최저가/최고가 조회시 보여 줄 최대 건수 |
+| codi.brand.product.count  | long      | 5   | 한브랜드당 최대 노출할 상품 수            |
+| codi.lock.wait            | Duration  | 3s  | 카테고리별 요약 정보 수정시 Lock wait 시간 | 
 
 ### 테스트, 실행, 빌드
 * 테스트
