@@ -385,9 +385,9 @@
       * 요청 parameters
           * path에 상품 ID 추가
       * 응답 Json (삭제된 상품 정보)
-
+       
         | 필드명      | Data Type | 설명    |
-                |----------|-----------|-------|
+        |----------|-----------|-------|
         | id       | long      | 상품 ID |
         | category | String    | 카테고리  |
         | brand    | String    | 브랜드   |
