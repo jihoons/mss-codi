@@ -469,4 +469,5 @@
   * ```./gradlew bootJar```
   * builds/libs/mss-codi-api-{VERSION}.jar 파일 생성
   * ```java -jar builds/libs/mss-codi-api-{VERSION}.jar```
-
+* Swagger UI
+  * ```http://localhost:8081/swagger-ui.html```
