@@ -5,6 +5,16 @@ export const client = axios.create({
     baseURL: import.meta.env.VITE_API_URL
 });
 
+client.interceptors.response.use(
+    (response) => {
+        return response;
+    },
+    (error: any) => {
+        toast.error(error.response?.data?.message ?? "오류가 발생했습니다.")
+        return null;
+    }
+);
+
 export type PriceType = "min" | "max";
 
 export interface CodiAllCategoryResponse {
@@ -20,10 +30,9 @@ export interface BrandOfCategory {
 
 export const getCodiAllCategory = async (priceType: PriceType = "min") => {
     const response = await client.get(`/codi/all?priceType=${priceType}`)
-    if (response.status == 200) {
+    if (response) {
         return response.data as CodiAllCategoryResponse;
     } else {
-        toast.error(response.data?.message ?? "오류가 발생했습니다.");
         return null;
     }
 }
@@ -46,10 +55,9 @@ interface PriceOfCategory {
 
 export const getCodeOneBrand = async (priceType: PriceType = "min") => {
     const response = await client.get(`/codi/brand?priceType=${priceType}`)
-    if (response.status == 200) {
+    if (response) {
         return response.data as CodiTargetPriceBrandResponse;
     } else {
-        toast.error(response.data?.message ?? "오류가 발생했습니다.");
         return null;
     }
 }
@@ -67,10 +75,9 @@ export interface CategoryBrand {
 
 export const getMinMaxProductByCategory = async (category: string) => {
     const response = await client.get(`/codi/category?category=${encodeURIComponent(category)}`)
-    if (response.status == 200) {
+    if (response) {
         return response.data as MinMaxProductByCategoryResponse;
     } else {
-        toast.error(response.data?.message ?? "오류가 발생했습니다.");
         return null;
     }
 }

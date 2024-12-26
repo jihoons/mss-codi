@@ -8,7 +8,7 @@ export interface Category {
 
 export const getAllCategories = async () => {
     const response = await client.get("/category");
-    if (response.status == 200) {
+    if (response) {
         return response.data as Category[];
     } else {
         return [];
