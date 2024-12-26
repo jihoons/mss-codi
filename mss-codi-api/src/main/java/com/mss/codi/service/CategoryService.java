@@ -23,6 +23,6 @@ public class CategoryService {
     }
 
     public Category getCategoryByName(String name) {
-        return categoryRepository.findByName(name).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Category not found"));
+        return categoryRepository.findByName(name).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "카테고리(" + name + ")를 찾을 수 없습니다."));
     }
 }

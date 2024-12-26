@@ -26,7 +26,7 @@ public class BrandService {
     public Brand addBrand(String name) {
         Optional<Brand> optionalBrand = brandRepository.findByName(name);
         if (optionalBrand.isPresent()) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Brand[" + name + "]" + " already exists");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "이미 등록된 브랜드(" + name + ") 입니다.");
         }
         Brand brand = new Brand();
         brand.setName(name);
@@ -34,6 +34,6 @@ public class BrandService {
     }
 
     public Brand getBrandByName(String name) {
-        return brandRepository.findByName(name).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Brand not found"));
+        return brandRepository.findByName(name).orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "브랜드(" + name + ")를 찾을 수 없습니다."));
     }
 }
