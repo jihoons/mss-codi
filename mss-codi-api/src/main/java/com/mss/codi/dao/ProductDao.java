@@ -7,6 +7,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +23,7 @@ public class ProductDao {
     private final QBrand qBrand = QBrand.brand;
     private final QCategory qCategory = QCategory.category;
     private final ProductRepository productRepository;
+    private final Environment environment;
 
     public List<Product> getProductsByCategoryAndBrand(String category, String brand) {
         var query = queryFactory
@@ -65,9 +67,11 @@ public class ProductDao {
 
     @Transactional
     public void clear() {
-        productRepository.deleteProducts();
-        queryFactory.delete(qBrand).execute();
-        queryFactory.delete(qCategory).execute();
+        if (StringUtils.equalsAny("test", environment.getActiveProfiles())) {
+            productRepository.deleteProducts();
+            queryFactory.delete(qBrand).execute();
+            queryFactory.delete(qCategory).execute();
+        }
     }
 
     @Transactional(readOnly = true)
