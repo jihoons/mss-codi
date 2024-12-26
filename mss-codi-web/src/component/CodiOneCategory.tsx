@@ -1,6 +1,18 @@
 import {useEffect, useState} from "react";
 import {Category, getAllCategories} from "../api/categoryApi.ts";
-import {MenuItem, Select, Stack, Table, TableBody, TableCell, TableHead, TableRow, Typography} from "@mui/material";
+import {
+    Card,
+    CardContent,
+    MenuItem,
+    Select,
+    Stack,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableRow,
+    Typography
+} from "@mui/material";
 import {CategoryBrand, getMinMaxProductByCategory, MinMaxProductByCategoryResponse} from "../api/codiApi.ts";
 
 const CodiOneCategory = () => {
@@ -78,11 +90,19 @@ const CodiOneCategory = () => {
             }
             {minMaxCategory &&
                 <>
-                    <Typography>{minMaxCategory["카테고리"]}</Typography>
-                    <Typography>최저가 브랜드 {`${minMaxCategory["최저가"].length} 개`}</Typography>
-                    {getTable(minMaxCategory["최저가"])}
-                    <Typography>최고가 브랜드 {`${minMaxCategory["최고가"].length} 개`}</Typography>
-                    {getTable(minMaxCategory["최고가"])}
+                    <Typography>{`검색 카테고리: ${minMaxCategory["카테고리"]}`}</Typography>
+                    <Card>
+                        <CardContent>
+                            <Typography variant={"h6"}>최저가 브랜드 {`${minMaxCategory["최저가"].length} 개`}</Typography>
+                            {getTable(minMaxCategory["최저가"])}
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardContent>
+                            <Typography variant={"h6"}>최고가 브랜드 {`${minMaxCategory["최고가"].length} 개`}</Typography>
+                            {getTable(minMaxCategory["최고가"])}
+                        </CardContent>
+                    </Card>
                 </>
             }
         </Stack>

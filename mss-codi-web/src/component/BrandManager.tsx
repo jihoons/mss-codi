@@ -1,4 +1,15 @@
-import {Button, Stack, Table, TableBody, TableCell, TableHead, TableRow, TextField, Typography} from "@mui/material";
+import {
+    Box,
+    Button,
+    Stack,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableRow,
+    TextField,
+    Typography
+} from "@mui/material";
 import {useEffect, useState} from "react";
 import {addBrand, Brand, getBrands} from "../api/productApi.ts";
 
@@ -33,8 +44,10 @@ const BrandManager = () => {
     return (
         <Stack gap={"16px"}>
             <Typography>브랜드 추가</Typography>
-            <TextField value={name} onChange={onChangeName} />
-            <Button onClick={onClickAddBrand} variant={"contained"} disabled={!name}>추가</Button>
+            <Box gap={"16px"} display={"flex"}>
+                <TextField size={"small"} variant={"outlined"} value={name} onChange={onChangeName} />
+                <Button onClick={onClickAddBrand} variant={"contained"} disabled={!name}>추가</Button>
+            </Box>
             {brands.length > 0 &&
                 <Table>
                     <TableHead>
