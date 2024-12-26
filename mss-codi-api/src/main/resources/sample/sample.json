@@ -1,0 +1,106 @@
+[
+  { "category":"상의",
+    "products": [
+      {"brand": "A", "price": 11200},
+      {"brand": "B", "price": 10500},
+      {"brand": "C", "price": 10000},
+      {"brand": "D", "price": 10100},
+      {"brand": "E", "price": 10700},
+      {"brand": "F", "price": 11200},
+      {"brand": "G", "price": 10500},
+      {"brand": "H", "price": 10800},
+      {"brand": "I", "price": 11400}
+    ]
+  },
+  { "category":"아우터",
+    "products": [
+      {"brand": "A", "price": 5500},
+      {"brand": "B", "price": 5900},
+      {"brand": "C", "price": 6200},
+      {"brand": "D", "price": 5100},
+      {"brand": "E", "price": 5000},
+      {"brand": "F", "price": 7200},
+      {"brand": "G", "price": 5800},
+      {"brand": "H", "price": 6300},
+      {"brand": "I", "price": 6700}
+    ]
+  },
+  { "category":"바지",
+    "products": [
+      {"brand": "A", "price": 4200},
+      {"brand": "B", "price": 3800},
+      {"brand": "C", "price": 3300},
+      {"brand": "D", "price": 3000},
+      {"brand": "E", "price": 3800},
+      {"brand": "F", "price": 4000},
+      {"brand": "G", "price": 3900},
+      {"brand": "H", "price": 3100},
+      {"brand": "I", "price": 3200}
+    ]
+  },
+  { "category":"스니커즈",
+    "products": [
+      {"brand": "A", "price": 9000},
+      {"brand": "B", "price": 9100},
+      {"brand": "C", "price": 9200},
+      {"brand": "D", "price": 9500},
+      {"brand": "E", "price": 9900},
+      {"brand": "F", "price": 9300},
+      {"brand": "G", "price": 9000},
+      {"brand": "H", "price": 9700},
+      {"brand": "I", "price": 9500}
+    ]
+  },
+  { "category":"가방",
+    "products": [
+      {"brand": "A", "price": 2000},
+      {"brand": "B", "price": 2100},
+      {"brand": "C", "price": 2200},
+      {"brand": "D", "price": 2500},
+      {"brand": "E", "price": 2300},
+      {"brand": "F", "price": 2100},
+      {"brand": "G", "price": 2200},
+      {"brand": "H", "price": 2100},
+      {"brand": "I", "price": 2400}
+    ]
+  },
+  { "category":"모자",
+    "products": [
+      {"brand": "A", "price": 1700},
+      {"brand": "B", "price": 2000},
+      {"brand": "C", "price": 1900},
+      {"brand": "D", "price": 1500},
+      {"brand": "E", "price": 1800},
+      {"brand": "F", "price": 1600},
+      {"brand": "G", "price": 1700},
+      {"brand": "H", "price": 1600},
+      {"brand": "I", "price": 1700}
+    ]
+  },
+  { "category":"양말",
+    "products": [
+      {"brand": "A", "price": 1800},
+      {"brand": "B", "price": 2000},
+      {"brand": "C", "price": 2200},
+      {"brand": "D", "price": 2400},
+      {"brand": "E", "price": 2100},
+      {"brand": "F", "price": 2300},
+      {"brand": "G", "price": 2100},
+      {"brand": "H", "price": 2000},
+      {"brand": "I", "price": 1700}
+    ]
+  },
+  { "category":"액세서리",
+    "products": [
+      {"brand": "A", "price": 2300},
+      {"brand": "B", "price": 2200},
+      {"brand": "C", "price": 2100},
+      {"brand": "D", "price": 2000},
+      {"brand": "E", "price": 2100},
+      {"brand": "F", "price": 1900},
+      {"brand": "G", "price": 2000},
+      {"brand": "H", "price": 2000},
+      {"brand": "I", "price": 2400}
+    ]
+  }
+]

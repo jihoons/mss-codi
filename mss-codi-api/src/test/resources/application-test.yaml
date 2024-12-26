@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: codi application
+
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+        highlight_sql: false
+
+server:
+  port: 8081
+  shutdown: graceful
+
+logging:
+  level:
+    root: info
