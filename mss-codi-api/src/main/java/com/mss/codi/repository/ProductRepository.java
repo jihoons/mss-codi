@@ -7,20 +7,14 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    @Query("""
-from Product p
-join fetch p.brand b
-join fetch p.category c
-""")
-    List<Product> getAllProducts();
-
+    /**
+     * 테스트를 위해서 모든 데이터를 삭제할 수 있도록 수정
+     */
     @Query(nativeQuery = true, value = """
-delete from product
-""")
+        delete from product
+    """)
     @Modifying
     @Profile("test")
     void deleteProducts();
