@@ -457,7 +457,7 @@
 |---------------------------|-----------|-----|------------------------------|
 | codi.category.brand.count | long      | 5   | 카테고리별 최저가/최고가 조회시 보여 줄 최대 건수 |
 | codi.brand.product.count  | long      | 5   | 한브랜드당 최대 노출할 상품 수            |
-| codi.lock.wait            | Duration  | 3s  | 카테고리별 요약 정보 수정시 Lock wait 시간 | 
+| codi.lock.wait            | Duration  | 30s | 카테고리별 요약 정보 수정시 Lock wait 시간 | 
 
 ### 테스트, 실행, 빌드
 * 테스트
